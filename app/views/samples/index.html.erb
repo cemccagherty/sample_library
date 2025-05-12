@@ -1,6 +1,8 @@
 <% @samples.each do |sample| %>
-  <p><%= @sample.name %></p>
-  <p>BPM: <%= @sample.bpm %></p>
-  <p>Key: <%= @sample.key %></p>
-  <p>Source: <%= @sample.source %></p>
+  <p><%= sample.name %></p>
+  <p>BPM: <%= sample.bpm %></p>
+  <p>Key: <%= sample.key %></p>
+  <p>Source: <%= sample.source %></p>
 <% end %>
+
+<%= link_to "add sample", new_sample_path %>
