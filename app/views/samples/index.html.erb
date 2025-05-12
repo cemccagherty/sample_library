@@ -1,5 +1,6 @@
 <% @samples.each do |sample| %>
   <p><%= sample.name %></p>
+  <%= audio_tag url_for(sample.audio_file), controls: true %>
   <p>BPM: <%= sample.bpm %></p>
   <p>Key: <%= sample.key %></p>
   <p>Source: <%= sample.source %></p>
