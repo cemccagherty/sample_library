@@ -1,0 +1,8 @@
+<%= simple_form_for(@sample) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :bpm %>
+  <%= f.input :key %>
+  <%= f.input :source %>
+  <%= f.input :audio_file, as: :file %>
+  <%= f.button :submit %>
+<% end %>
