@@ -5,6 +5,11 @@
   <p>Key: <%= sample.key %></p>
   <p>Source: <%= sample.source %></p>
   <p><%= link_to "edit sample", edit_sample_path(sample) %></p>
+  <p><%= link_to "delete sample", sample_path(sample),
+          data: {
+            turbo_method: :delete,
+            turbo_confirm: "Delete this sample?"
+            } %></p>
 <% end %>
 
 <%= link_to "add sample", new_sample_path %>
