@@ -17,6 +17,19 @@ class SamplesController < ApplicationController
     end
   end
 
+  def edit
+    @sample = Sample.find(params[:id])
+  end
+
+  def update
+    @sample = Sample.find(params[:id])
+    if @sample.update(sample_params)
+      redirect_to samples_path
+    else
+      render :update, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def sample_params

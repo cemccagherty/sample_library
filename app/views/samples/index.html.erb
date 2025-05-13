@@ -4,6 +4,7 @@
   <p>BPM: <%= sample.bpm %></p>
   <p>Key: <%= sample.key %></p>
   <p>Source: <%= sample.source %></p>
+  <p><%= link_to "edit sample", edit_sample_path(sample) %></p>
 <% end %>
 
 <%= link_to "add sample", new_sample_path %>
