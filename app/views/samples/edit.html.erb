@@ -3,6 +3,7 @@
   <%= f.input :bpm %>
   <%= f.input :key %>
   <%= f.input :source %>
+  <%= f.input :private, as: :radio_buttons, collection: [['private', true], ['public', false]] %>
   <%= f.input :audio_file, as: :file %>
   <%= f.button :submit %>
 <% end %>

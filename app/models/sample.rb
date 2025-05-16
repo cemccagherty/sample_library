@@ -10,6 +10,8 @@ class Sample < ApplicationRecord
 
   validates :source, length: { in: 1..150 }
 
+  validates :private, presence: true
+
   validates :audio_file, attached: true
   validates :audio_file, content_type: [
     'audio/mpeg',
