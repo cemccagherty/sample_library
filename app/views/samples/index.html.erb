@@ -4,6 +4,7 @@
   <p>BPM: <%= sample.bpm %></p>
   <p>Key: <%= sample.key %></p>
   <p>Source: <%= sample.source %></p>
+  <p>Publicity: <%= sample.private ? "private" : "public" %></p>
   <p><%= link_to "edit sample", edit_sample_path(sample) %></p>
   <p><%= link_to "delete sample", sample_path(sample),
           data: {

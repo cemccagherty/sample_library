@@ -39,6 +39,6 @@ class SamplesController < ApplicationController
   private
 
   def sample_params
-    params.require(:sample).permit(:name, :bpm, :key, :source, :audio_file)
+    params.require(:sample).permit(:name, :bpm, :key, :source, :private, :audio_file)
   end
 end
