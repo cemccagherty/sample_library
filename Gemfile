@@ -42,6 +42,7 @@ gem "sassc-rails"
 
 gem "devise"
 gem "cloudinary"
+gem 'active_storage_validations'
 
 
 group :development, :test do
