@@ -2,6 +2,9 @@ class Sample < ApplicationRecord
   belongs_to :user
   has_one_attached :audio_file
 
+  has_many :sample_tags, dependant: :destory
+  has_many :tags, through: :sample_tags
+
   ACCEPTED_KEYS = [
     'C', 'C#/Db', 'D', 'D#/Eb', 'E',
     'F', 'F#/Gb', 'G', 'G#/Ab', 'A',
