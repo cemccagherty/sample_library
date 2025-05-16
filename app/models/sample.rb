@@ -2,11 +2,19 @@ class Sample < ApplicationRecord
   belongs_to :user
   has_one_attached :audio_file
 
+  ACCEPTED_KEYS = [
+    'C', 'C#/Db', 'D', 'D#/Eb', 'E',
+    'F', 'F#/Gb', 'G', 'G#/Ab', 'A',
+    'A#/Bb', 'B', 'N/A'
+  ].freeze
+
   validates :name, presence: true
   validates :name, length: { in: 1..30 }
 
   validates :bpm, inclusion: { in: 20..300 }, allow_nil: true
   # allow_nil: true to accomodate N/A bpm input for ambient etc
+
+  validates :key, inclusion: { in: ACCEPTED_KEYS }
 
   validates :source, length: { in: 1..150 }
 
